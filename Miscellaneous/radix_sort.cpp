@@ -1,3 +1,6 @@
+// O(nLogb(n)) -> n: size of array, b = base
+// arr: 0-indexed array to be sorted
+// n: size of arr
 template<typename T, int base>
 void radix_sort(T *arr, int n){ 
     if(n==0) return;
