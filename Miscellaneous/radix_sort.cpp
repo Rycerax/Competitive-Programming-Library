@@ -1,7 +1,3 @@
-#include<bits/stdc++.h>
-
-using namespace std;
-
 template<typename T, int base>
 void radix_sort(T *arr, int n){ 
     if(n==0) return;
@@ -27,18 +23,4 @@ void radix_sort(T *arr, int n){
     for(int i=n-1;i>=0;i--) if(arr[i]<0) narr[ptr++] = arr[i];
     for(int i=0;i<n;i++) if(arr[i]>0) narr[ptr++] = arr[i];
     for(int i=0;i<n;i++) arr[i] = narr[i];
-}
-
-int main(){
-  int *v = new int[6];
-  v[0] = 2;
-  v[1] = 5;
-  v[2] = 3;
-  v[3] = 3;
-  v[4] = 2;
-  v[5] = 2;
-  radix_sort<int, 10>(v, 6);
-  for(int i = 0; i < 6; ++i)
-    cout << v[i] << ' ';
-  cout << '\n';
 }
